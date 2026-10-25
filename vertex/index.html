@@ -1,0 +1,40 @@
+<title>VERTEX HP 3案</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPMincho:wght@400;700&family=BIZ+UDPGothic:wght@400;700&display=swap">
+<style>
+:root{--bg:#faf9f6;--fg:#16161d;--muted:#5d5d6b;--line:#e4e2dc;--card:#fff;--ac:#3b3fc4}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141418;--fg:#f1f0ec;--muted:#a8a7b3;--line:#2c2c34;--card:#1d1d23;--ac:#8f93ff}}
+:root[data-theme="dark"]{--bg:#141418;--fg:#f1f0ec;--muted:#a8a7b3;--line:#2c2c34;--card:#1d1d23;--ac:#8f93ff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"BIZ UDPGothic","Hiragino Sans",sans-serif;line-height:1.8}
+.wrap{max-width:1080px;margin:0 auto;padding:40px 16px 64px}
+h1{font-family:"BIZ UDPMincho","Hiragino Mincho ProN",serif;font-size:clamp(1.6rem,4vw,2.3rem);margin:0 0 6px}
+.lead{color:var(--muted);margin:0 0 28px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+a.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;color:inherit;text-decoration:none;transition:transform .15s}
+a.card:hover{transform:translateY(-3px)}
+a.card img{display:block;width:100%;aspect-ratio:1280/900;object-fit:cover;object-position:top;border-bottom:1px solid var(--line)}
+.card .t{padding:14px 16px 16px}
+.card b{font-family:"BIZ UDPMincho",serif;font-size:1.15rem}
+.card p{margin:4px 0 0;color:var(--muted);font-size:.9rem}
+.note{margin-top:32px;border-top:1px solid var(--line);padding-top:20px;font-size:.92rem;color:var(--muted)}
+.note h2{font-size:1rem;color:var(--fg);margin:0 0 6px}
+.note ul{margin:0 0 14px;padding-left:1.2em}
+@media(max-width:760px){.grid{grid-template-columns:1fr}}
+</style>
+<div class="wrap">
+  <h1>合同会社VERTEX　ホームページ 3案</h1>
+  <p class="lead">めぐさんがLINEで送った文言はそのまま。足りない所だけ、同じ業種の求人サイトを調べて書き足しました。</p>
+  <div class="grid">
+    <a class="card" href="a.html"><img src="img/shot_a.png" alt="案Aの画面"><div class="t"><b>案A　安心・誠実</b><p>白と藍色。青いダリア。応募しやすさ重視。</p></div></a>
+    <a class="card" href="b.html"><img src="img/shot_b.png" alt="案Bの画面"><div class="t"><b>案B　華やか・力強い</b><p>濃いピンクのグラデーション。ピンクのダリア。</p></div></a>
+    <a class="card" href="c.html"><img src="img/shot_c.png" alt="案Cの画面"><div class="t"><b>案C　雑誌風・上品</b><p>大きな見出しと2輪のダリア。「運送に、花を。」</p></div></a>
+  </div>
+  <div class="note">
+    <h2>めぐさんの文言のまま（一字一句そのまま）</h2>
+    <ul><li>ご挨拶／私達のビジョン／求人一覧／会社概要／よくある質問／プライバシーポリシー</li></ul>
+    <h2>AIが書き足した所</h2>
+    <ul><li>一番上の見出しと一言・数字の4枠（数字はめぐさんの文から）・働き方4つ・応募の流れ・1日の流れ（一例）・問い合わせの一言</li></ul>
+    <h2>差し替えが要る所</h2>
+    <ul><li>「私たちの配送風景。」の写真枠は仮です。今のサイトの配送写真に入れ替えます。</li></ul>
+  </div>
+</div>

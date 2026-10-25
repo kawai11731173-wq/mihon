@@ -1,0 +1,266 @@
+<!doctype html><html lang="ja"><head>
+<meta name="robots" content="noindex"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>VERTEX 案C</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPMincho:wght@400;700&family=BIZ+UDPGothic:wght@400;700&display=swap">
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:"BIZ UDPGothic","Hiragino Sans",sans-serif;line-height:1.85;color:var(--ink);background:var(--bg);font-size:16px}
+img{max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}
+section{padding:72px 0}
+h1,h2,h3{font-family:"BIZ UDPMincho","Hiragino Mincho ProN",serif;line-height:1.35;text-wrap:balance;margin:0}
+h2{font-size:clamp(1.6rem,3.4vw,2.3rem);margin-bottom:28px}
+.eyebrow{font-size:.8rem;letter-spacing:.2em;color:var(--accent);font-weight:700;display:block;margin-bottom:8px}
+.v{white-space:pre-line;font-size:1rem}
+.v .vh{display:inline-block;margin-top:.6em;font-size:1.08em;color:var(--accent)}
+.v .vh.big{font-family:"BIZ UDPMincho",serif;font-size:1.5em;color:var(--ink)}
+.v .q{display:inline-block;margin-top:.8em;font-size:1.05em}
+.v .lab{display:inline-block;margin-top:.7em;color:var(--accent);font-size:.92em}
+.facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.fact{display:grid;gap:2px;padding:18px;border-radius:14px;background:var(--card)}
+.fk{font-size:.8rem;color:var(--muted)}.fv{font-family:"BIZ UDPMincho",serif;font-size:1.6rem;font-weight:700;color:var(--accent)}.fs{font-size:.8rem;color:var(--muted)}
+.points{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.pt{padding:26px;border-radius:16px;background:var(--card)}.pt h3{font-size:1.2rem;margin:6px 0 8px}.pt p{margin:0;color:var(--muted)}
+.pn{font-family:"BIZ UDPMincho",serif;font-size:1.6rem;color:var(--accent2)}
+.flow{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.flow li{padding:22px;border-radius:16px;background:var(--card);position:relative}.flow h3{font-size:1.1rem;margin:4px 0 6px}.flow p{margin:0;font-size:.92rem;color:var(--muted)}
+.st{font-size:.75rem;letter-spacing:.15em;color:var(--accent);font-weight:700}
+.day{list-style:none;margin:0;padding:0;display:grid;gap:10px}.day li{display:grid;grid-template-columns:110px 1fr;gap:14px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--line)}
+.tm{font-weight:700;color:var(--accent)}.day p{margin:0}
+.scenes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.scene{margin:0}.ph{aspect-ratio:4/3;border-radius:18px;background:var(--card);display:grid;place-items:center;position:relative;overflow:hidden;color:var(--accent)}
+.ph svg{width:62%;position:relative;z-index:1}.sf{position:absolute;width:70%;right:-14%;bottom:-18%;mix-blend-mode:multiply;opacity:.9}
+.scene:not(.s1) .sf{width:84%;right:8%;bottom:8%;position:absolute}
+figcaption{margin-top:8px;font-weight:700}.note{display:block;font-weight:400;font-size:.75rem;color:var(--muted)}
+.contact{text-align:center}.tel{display:inline-block;margin-top:14px;font-family:"BIZ UDPMincho",serif;font-size:clamp(1.8rem,5vw,2.6rem);font-weight:700;color:var(--accent);text-decoration:none}
+.btn{display:inline-block;padding:14px 26px;border-radius:999px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700}
+.btn.ghost{background:transparent;color:var(--accent);border:2px solid var(--accent)}
+details{margin-top:18px;border-top:1px solid var(--line);padding-top:14px}summary{cursor:pointer;font-weight:700}
+footer{padding:40px 0 calc(40px + env(safe-area-inset-bottom,0px));font-size:.85rem;color:var(--muted)}
+.callbar{display:none}
+@media (max-width:760px){section{padding:52px 0}.facts{grid-template-columns:repeat(2,minmax(0,1fr))}.points,.flow,.scenes{grid-template-columns:1fr}
+ .callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:20;gap:8px;padding:10px max(14px,env(safe-area-inset-left,0px)) calc(10px + env(safe-area-inset-bottom,0px));background:var(--bg);border-top:1px solid var(--line)}
+ .callbar a{flex:1;text-align:center}body{padding-bottom:76px}.day li{grid-template-columns:84px 1fr}}
+a:focus-visible{outline:3px solid var(--accent2);outline-offset:3px}
+:root{--bg:#fbfaf7;--ink:#17181d;--muted:#5f6068;--card:#f1efe9;--line:#e3e0d7;--accent:#3a43b8;--accent2:#c2347a}
+.top{position:sticky;top:0;z-index:10;background:rgba(251,250,247,.9);backdrop-filter:blur(8px)}
+.navrow{display:flex;align-items:center;gap:18px;padding-block:14px}.brand{font-family:"BIZ UDPMincho",serif;font-weight:700;font-size:1.2rem;color:var(--ink);text-decoration:none;letter-spacing:.3em}
+nav{display:flex;gap:18px;margin-left:auto;font-size:.88rem}nav a{color:var(--ink);text-decoration:none}.btn.small{padding:8px 16px;font-size:.85rem;background:var(--ink)}
+@media(max-width:760px){nav{display:none}.btn.small{margin-left:auto}}
+.hero{padding:40px 0 30px}.hero .wrap{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px}
+.hero .copy{grid-column:1/5;align-self:center}.hero h1{font-size:clamp(3rem,10vw,7rem);letter-spacing:.02em;margin:6px 0 14px}
+.hero p{color:var(--muted);max-width:30em;margin:0 0 24px}.hero .fl{grid-column:5/7;display:grid;gap:10px}
+.hero .fl img{mix-blend-mode:multiply;width:100%}.hero .fl img:last-child{width:70%;justify-self:end;margin-top:-30%}
+.btn{background:var(--ink)}.btn.ghost{color:var(--ink);border-color:var(--ink)}
+.two{display:grid;grid-template-columns:.7fr 1.3fr;gap:36px}
+.card-v{padding:28px;border-radius:22px;background:var(--card)}
+.fact{background:transparent;border-top:2px solid var(--ink);border-radius:0;padding:14px 0}.fv{color:var(--ink)}
+.pt{background:transparent;border:1px solid var(--line)}.pn{color:var(--accent2)}
+.flowerbox{display:grid;place-items:center}.gf{mix-blend-mode:multiply;width:80%}
+.cta-row{margin-top:22px}.mut{color:var(--muted)}h2{font-size:clamp(1.8rem,4.4vw,3rem)}
+@media(max-width:760px){.hero .wrap{grid-template-columns:1fr}.hero .copy,.hero .fl{grid-column:1}.hero .fl{grid-template-columns:1fr 1fr;align-items:end}.hero .fl img:last-child{margin-top:0;width:100%}.two{grid-template-columns:1fr}}
+</style></head><body><header class="top"><div class="wrap navrow"><a class="brand" href="#">VERTEX</a>
+<nav><a href="#vision">ビジョン</a><a href="#recruit">求人</a><a href="#flow">応募の流れ</a><a href="#faq">よくある質問</a><a href="#company">会社概要</a></nav>
+<a class="btn small" href="tel:0363562503">電話で応募</a></div></header><section class="hero"><div class="wrap"><div class="copy"><span class="eyebrow">合同会社VERTEX</span><h1>運送に、花を。</h1><p>人とのつながりを大切にする、新しい運送会社。地域を走るドライバーを募集しています。</p><a class="btn" href="tel:0363562503">電話で応募する</a> <a class="btn ghost" href="#recruit">求人を見る</a></div><div class="fl"><img src="img/flower_blue.jpg" alt=""><img src="img/flower_pink.jpg" alt=""></div></div></section>
+<section id="facts" class="facts-sec"><div class="wrap"><div class="facts"><div class="fact"><span class="fk">1日あたり</span><span class="fv">19,000円〜</span><span class="fs">固定報酬制の場合</span></div><div class="fact"><span class="fk">勤務</span><span class="fv">週3日〜</span><span class="fs">シフト自由</span></div><div class="fact"><span class="fk">寮</span><span class="fv">月35,000円〜</span><span class="fs">遠方からの応募も歓迎</span></div><div class="fact"><span class="fk">免許</span><span class="fv">AT限定可</span><span class="fs">普通自動車運転免許</span></div></div></div></section>
+<section id="vision" class="vision"><div class="wrap two"><div><span class="eyebrow">VISION</span><h2>私達のビジョン</h2></div><div class="v" data-src="vision">私たちは、物流を通じて人・企業・地域をつなぎ、地域とともに成長する会社を目指します。
+
+DX・AIを活用して配送の効率化とコスト削減を進め、お客様にはより安価で、迅速かつ安全な配送サービスを提供します。
+
+また、フリーランスや地域の小規模事業者など、多様な配送パートナーと連携し、新たな仕事と雇用を生み出し、地域経済の活性化に貢献します。
+
+そして、物流を支えるドライバーが安心して誇りを持って働ける環境をつくり、「ドライバーファースト」を実現することを大切にします。
+
+<strong class="vh">私たちが掲げる「地参地商」</strong>
+
+地域の人が参画し、地域で商いを生み、その価値を地域へ還元する。
+
+人とのつながりを大切にし、変わらない本質を守りながら、時代の変化にも挑戦する。
+
+物流の未来を変え、地域の未来をつくる。
+
+それが、私たちのビジョンです</div></div></section>
+<section id="points"><div class="wrap"><span class="eyebrow">WORK STYLE</span><h2>VERTEXの働き方</h2><div class="points"><div class="pt"><span class="pn">01</span><h3>報酬の形を選べる</h3><p>安定した日当の固定報酬制と、配った分だけ増える出来高制。自分の目標に合わせて選べます。</p></div><div class="pt"><span class="pn">02</span><h3>未経験から始められる</h3><p>最初はリーダーが同乗して、仕事の流れを一緒に確かめます。分からないことは先輩に聞ける環境です。</p></div><div class="pt"><span class="pn">03</span><h3>住まいと車の心配を減らせる</h3><p>寮と車両リースを用意しています。遠方からでも、車がなくても始めやすい仕組みです。</p></div><div class="pt"><span class="pn">04</span><h3>その先も応援する</h3><p>経験を積んだ後の独立も応援しています。長く働くことも、自分の事業を持つことも目指せます。</p></div></div></div></section>
+<section id="recruit" class="recruit"><div class="wrap"><span class="eyebrow">RECRUIT</span><h2>求人一覧｜軽貨物配送ドライバー</h2><div class="card-v"><div class="v" data-src="recruit"><strong class="vh">募集概要</strong>
+
+雇用形態 業務委託
+
+職種 軽貨物配送ドライバー
+
+報酬 月収350,000円~600,000円 ※出来高制の場合 ※稼働日数・配送個数・エリア等により異なります
+
+勤務地 埼玉県・東京都・神奈川県および近隣エリア
+
+<strong class="vh">勤務時間・日数</strong>
+
+9:00〜21:00
+7:00〜21:00
+(配属先により異なります)
+ シフト自由 週3日~勤務可能
+
+応募資格 普通自動車運転免許(AT限定可)
+
+<strong class="vh">報酬体系を選択できます</strong>
+<strong class="vh">1 固定報酬制</strong>
+安定した収入を重視したい方におすすめです。
+1日あたり19,000円~25,000円
+<strong class="vh">【月収例】</strong>
+19,000円 × 月20日 = 380,000円/月
+24,000円 × 月23日 = 552,000円/月
+※報酬額は案件・稼働条件等により異なります。 ※詳細は面接時にご相談ください。
+
+<strong class="vh">2 出来高制</strong>
+配送した個数に応じて報酬が決まるため、頑張った分だけ収入アップを目指せます。
+<strong class="vh">【月収例】</strong>
+1個平均138円 × 180個 × 22日 = 546,480円/月
+1個平均138円 × 180個 × 20日 = 496,800円/月
+
+<strong class="vh">戸建エリア・高単価エリアあり</strong>
+戸建住宅への配送を中心に、しっかり稼ぎたい方にもおすすめです。
+1個185円の場合
+150個 × 185円 = 27,750円/日
+200個 × 185円 = 37,000円/日
+300個 × 185円 = 55,500円/日
+
+<strong class="vh">夜間・大型荷物手当</strong>
+夜間配送・大型荷物(手で運べる荷物)については、
+1個につき45円~85円の追加報酬あり。
+配送経験がある方、さらに収入アップを目指したい方にも適しています。
+
+<strong class="vh">寮完備</strong>
+月額35,000円~
+遠方からの応募も歓迎しています。 入居条件・費用等の詳細は面接時にご相談ください。
+
+<strong class="vh">車両・経費について</strong>
+配送業務のため、車両が必要となります。
+車両リース:月額30,000円~
+私用での利用も可能。
+ガソリン代 条件によりガソリン代の一部支給あり。
+
+<strong class="vh">手当・賞与</strong>
+・特別手当あり ・賞与あり ・4ヶ月に1度の面談あり
+日々の実績や勤務状況を確認しながら、働き方や収入について相談できます。
+
+<strong class="vh">独立支援制度</strong>
+
+軽貨物配送は、働き方や配送効率を工夫することで収入アップを目指せる仕事です。
+当社では、配送ドライバーとして経験を積んだ後の独立もバックアップしています。
+「安定して働きたい」 「頑張った分だけ稼ぎたい」 「将来的に独立したい」
+それぞれの目標に合わせた働き方をサポート。
+
+<strong class="vh">こんな方を歓迎します</strong>
+・しっかり収入を得たい方 ・自分のペースで働きたい方 ・配送経験を活かしたい方 ・未経験から軽貨物配送に挑戦したい方 ・将来的に独立を目指している方 ・長期的に安定して働きたい方</div></div>
+<p class="cta-row"><a class="btn" href="tel:0363562503">電話で応募する</a></p></div></section>
+<section id="flow"><div class="wrap"><span class="eyebrow">FLOW</span><h2>応募から稼働までの流れ</h2><ol class="flow"><li><span class="st">STEP 1</span><h3>応募</h3><p>お電話でご連絡ください。働き方の希望もお気軽にどうぞ。</p></li><li><span class="st">STEP 2</span><h3>面接・ご相談</h3><p>報酬の形、エリア、勤務日数、寮や車両のことを一緒に決めます。</p></li><li><span class="st">STEP 3</span><h3>同乗研修</h3><p>リーダーが同乗して、積み込みから配達までの流れを確かめます。</p></li><li><span class="st">STEP 4</span><h3>ひとりで稼働</h3><p>慣れてきたら、ひとりで担当ルートを回ります。困った時はいつでも相談できます。</p></li></ol></div></section>
+<section id="day"><div class="wrap two"><div><span class="eyebrow">ONE DAY</span><h2>1日の流れ（一例）</h2><p class="mut">配属先や担当ルートによって変わります。</p></div><ul class="day"><li><span class="tm">朝</span><p>拠点で荷物を受け取り、担当ルートの分を車に積み込みます。</p></li><li><span class="tm">午前〜午後</span><p>ルートの順に配達します。休憩は自分のペースで取れます。</p></li><li><span class="tm">夕方〜夜</span><p>時間指定の荷物や、不在だったお宅への再配達を回ります。</p></li><li><span class="tm">終わり</span><p>持ち戻りの荷物を返して、その日の配達を終えます。</p></li></ul></div></section>
+<section id="scenes"><div class="wrap"><span class="eyebrow">SCENE</span><h2>私たちの配送風景。</h2><div class="scenes"><figure class="scene s0"><div class="ph"><img src="img/flower_blue.jpg" alt="" class="sf"></div><figcaption>積み込み<span class="note">（今のサイトの配送写真に差し替え）</span></figcaption></figure><figure class="scene s1"><div class="ph"><svg viewBox="0 0 220 120" aria-hidden="true"><rect x="10" y="30" width="130" height="62" rx="10" fill="currentColor" opacity=".9"/><path d="M140 48h38l26 22v22h-64z" fill="currentColor" opacity=".75"/><rect x="152" y="54" width="26" height="16" rx="3" fill="#fff" opacity=".85"/><circle cx="48" cy="96" r="14" fill="#2b2b33"/><circle cx="48" cy="96" r="6" fill="#ddd"/><circle cx="172" cy="96" r="14" fill="#2b2b33"/><circle cx="172" cy="96" r="6" fill="#ddd"/><text x="75" y="68" text-anchor="middle" font-size="18" font-weight="700" fill="#fff" font-family="sans-serif">VERTEX</text></svg><img src="img/flower_pink.jpg" alt="" class="sf"></div><figcaption>地域を走る<span class="note">（今のサイトの配送写真に差し替え）</span></figcaption></figure><figure class="scene s2"><div class="ph"><img src="img/flower_blue.jpg" alt="" class="sf"></div><figcaption>お届け<span class="note">（今のサイトの配送写真に差し替え）</span></figcaption></figure></div></div></section>
+<section id="greet" class="greet"><div class="wrap two"><div class="flowerbox"><img src="img/flower_pink.jpg" alt="" class="gf"></div><div class="card-v"><div class="v" data-src="greet"><strong class="vh big">代表挨拶</strong>
+
+私たちは、「地産地消」ならぬ「地参地商」を掲げ、この地域になくてはならない運送会社を目指しています。
+
+「地参地商」とは、地域に人が参画し、地域で商いを生み、その価値を地域へ還元していくこと。
+
+地域の人・企業・仕事をつなぎ、地域とともに成長していく。それが、私たちの目指す「地参地商」です。
+
+変えてはいけない本質を大切にしながら、時代の変化を柔軟に取り入れ、「不易」と「流行」の両方を大切に、持続的に成長できる会社を創っていきます。
+
+私が最も大切にしているのは、人とのつながりです。
+
+企業として利益を生み出すことは、もちろん大切です。しかし、目先の損得だけではなく、志を持ち、自らの成長、社会への貢献、そして周囲への感謝を大切にできる人材を育てることこそ、長く続く会社の礎になると考えています。
+
+理念に共感してくれる仲間とともに、良き環境の中で人が育ち、人が人を支え、優良なドライバーが増えていく組織を築いていきます。
+
+荷物を届けることは、決して「当たり前」ではありません。
+私たちが届けたいのは、荷物だけではなく、安心と笑顔です。
+
+人を大切にし、人が人を育てる。
+
+地域に必要とされ、仲間に誇りを持ってもらえる会社へ。
+そして、地域と人の未来に貢献できる会社へ。
+
+これからも、地域とともに成長し続けていきます</div></div></div></section>
+<section id="faq"><div class="wrap"><span class="eyebrow">FAQ</span><div class="card-v"><div class="v" data-src="faq"><strong class="vh">▼よくあるご質問</strong>
+
+<strong class="q">⚫︎未経験でも応募できますか?</strong>
+
+はい、未経験の方も大歓迎です!
+
+入社後は、リーダーが同乗して仕事の流れを丁寧にお教えします。  
+最初は配達に慣れなかったり、分からないことがあったりしても大丈夫です。先輩スタッフがしっかりサポートしますので、安心してスタートできます。
+
+<strong class="q">⚫︎週2日から働けますか?</strong>
+
+はい、週2〜3日からご相談いただけます。
+
+業務委託のため、シフトはご希望に合わせて柔軟に調整可能です。月ごとに勤務日数や曜日を変更することもできます。
+
+配送エリアや勤務曜日などの詳細については、お気軽にお問い合わせください。
+
+<strong class="q">⚫︎必要な資格はありますか?</strong>
+
+普通自動車運転免許が必要です。  
+AT限定の免許でもご応募いただけます。
+
+そのほかの応募条件は募集職種によって異なりますので、詳しくは各求人情報をご確認ください</div></div></div></section>
+<section id="company"><div class="wrap two"><div><span class="eyebrow">ABOUT</span></div><div class="card-v"><div class="v" data-src="company"><strong class="lab">COMPANY</strong>
+<strong class="lab">私たちについて。</strong>
+<strong class="lab">会社名</strong>
+合同会社VERTEX
+
+<strong class="lab">代表者</strong>
+平野愛
+
+<strong class="lab">所在地</strong>
+
+⚫︎〒333-0816
+埼玉県川口市差間2丁目2-17
+
+⚫︎175-0082
+東京都板橋区高島平7丁目20-17
+テナント103
+
+<strong class="lab">電話番号</strong>
+03-6356-2503
+
+<strong class="lab">営業時間</strong>
+9:00〜21:00
+
+[定休日]日曜
+
+<strong class="lab">事業内容</strong>
+軽貨物運送業・企業配送
+〔宅配及び各種運送にかかわる事業〕</div></div></div></section>
+<section id="contact" class="contact"><div class="wrap"><span class="eyebrow">CONTACT</span><h2>お問い合わせ</h2><p>求人のご応募・配送のご相談は、お電話で受け付けています。</p><a class="tel" href="tel:0363562503">03-6356-2503</a></div></section>
+<footer><div class="wrap"><strong>合同会社VERTEX</strong><details><summary>プライバシーポリシー</summary><div class="v" data-src="privacy"><strong class="vh big">プライバシーポリシー</strong>
+
+[合同会社VERTEX](以下「当社」といいます)は、お客様の個人情報の重要性を深く認識し、その保護に取り組むことが重要な社会的責務であると考えております。当社は、以下の通り個人情報保護方針を定め、個人情報の適切な取り扱いに努めます。
+
+1. 個人情報の定義
+本ポリシーにおける「個人情報」とは、個人情報保護法にいう「個人情報」を指すものとし、生存する個人に関する情報であって、当該情報に含まれる氏名、生年月日、住所、電話番号、連絡先その他の記述等により特定の個人を識別できる情報を指します。
+
+2. 個人情報の取得方法
+当社は、ユーザーが利用登録をする際に氏名、生年月日、住所、電話番号、メールアドレスなどの個人情報をお尋ねすることがあります。
+
+3. 個人情報の利用目的
+当社が個人情報を収集・利用する目的は、以下の通りです。
+1. 当社サービスの提供・運営のため
+2. ユーザーからのお問い合わせに回答するため(本人確認を行うことを含む)
+3. 重要なお知らせや必要に応じたご連絡のため
+
+4. 利用目的の変更
+当社は、利用目的が変更前と関連性を有すると合理的に認められる場合に限り、個人情報の利用目的を変更するものとします。利用目的の変更を行った場合には、変更後の目的について、当社所定の方法によりユーザーに通知し、または本ウェブサイト上に公表するものとします。
+
+5. 個人情報の第三者提供
+当社は、次に掲げる場合を除いて、あらかじめユーザーの同意を得ることなく、第三者に個人情報を提供することはありません。ただし、個人情報保護法その他の法令で認められる場合を除きます。
+- 人の生命、身体または財産の保護のために必要がある場合であって、本人の同意を得ることが困難であるとき
+- 国の機関もしくは地方公共団体またはその委託を受けた者が法令の定める事務を遂行することに対して協力する必要がある場合であって、本人の同意を得ることにより当該事務の遂行に支障を及ぼすおそれがあるとき
+
+6. 安全管理措置
+当社は、個人情報の漏洩、滅失または毀損の防止その他の個人情報の安全管理のために、必要かつ適切な措置を講じます。
+
+お問い合わせ窓口
+当社の個人情報の取り扱いに関するお問い合わせは、下記までご連絡ください。
+
+
+合同会社VERTEX</div></details><p>© 合同会社VERTEX</p></div></footer>
+<div class="callbar"><a class="btn" href="tel:0363562503">電話で応募</a><a class="btn ghost" href="#recruit">求人を見る</a></div></body></html>
